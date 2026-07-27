@@ -14,9 +14,10 @@ resource "azurerm_linux_web_app" "app" {
   service_plan_id     = azurerm_service_plan.plan.id
   location            = var.location
   resource_group_name = var.resource_group_name
-  # can be also within block "connection_string {... if windows"
-  app_settings = {
-    ConnectionStrings__DefaultConnection = var.sql_connection_string
+  connection_string {
+    name  = "DefaultConnection"
+    type  = "SQLAzure"
+    value = var.sql_connection_string
   }
   site_config {
     application_stack {
