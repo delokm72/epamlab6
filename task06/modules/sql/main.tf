@@ -1,9 +1,9 @@
 resource "random_password" "sql_password" {
-  length           = 12
-  min_upper        = 2
-  min_lower        = 2
-  min_numeric      = 2
-  min_special      = 2
+  length      = 12
+  min_upper   = 2
+  min_lower   = 2
+  min_numeric = 2
+  min_special = 2
   # обмежує набір спеціальних символів, які можуть використовуватися під час генерації пароля
   override_special = "!#$%&*-_+="
 }
