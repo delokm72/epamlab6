@@ -4,7 +4,8 @@ resource "random_password" "sql_password" {
   min_lower        = 2
   min_numeric      = 2
   min_special      = 2
-  override_special = "!#$%&*()-_=+[]{}<>:?"
+  # обмежує набір спеціальних символів, які можуть використовуватися під час генерації пароля
+  override_special = "!#$%&*-_+="
 }
 
 resource "azurerm_key_vault_secret" "sql_admin_username" {
