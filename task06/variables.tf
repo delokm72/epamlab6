@@ -1,7 +1,7 @@
 variable "name_prefix" {
   description = "to generate in locals"
-  type    = string
-  default = "cmaz-53z813ye-mod6"
+  type        = string
+  default     = "cmaz-53z813ye-mod6"
 }
 
 variable "resource_group" {
@@ -47,15 +47,15 @@ variable "tags" {
 
 variable "allowed_ip_address" {
   description = "..."
-  type = string
+  type        = string
 }
 
 variable "sql_database_sku" {
   description = "..."
-  type = string
+  type        = string
 }
 
 variable "sql_database_name" {
   description = "..."
-  type = string
+  type        = string
 }
