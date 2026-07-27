@@ -1,4 +1,4 @@
-output "sql_fqdn" {
+output "sql_server_fqdn" {
   description = "Azure Sql Server FQDN"
   value       = module.sql.sql_server_fqdn
 }

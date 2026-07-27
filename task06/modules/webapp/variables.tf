@@ -46,4 +46,5 @@ variable "ip_restrictions" {
 variable "sql_connection_string" {
   description = "..."
   type        = string
+  sensitive   = true
 }
